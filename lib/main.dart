@@ -16,7 +16,7 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   final _navigatorKey = GlobalKey<NavigatorState>();
 
-  void showDialogDemo(String msg) {
+  void showGlobalDialog(String msg) {
     final context = _navigatorKey.currentState.overlay.context;
     final dialog = AlertDialog(
       actions: <Widget>[
@@ -62,20 +62,20 @@ class _MyAppState extends State<MyApp> {
                       listener: (context, state) {
                     if (state is InternetConnected &&
                         state.connectionType == ConnectionType.Wifi) {
-                      showDialogDemo(
+                      showGlobalDialog(
                           'Show Dialog From Connectivity, Connection Type : Wifi');
                     } else if (state is InternetConnected &&
                         state.connectionType == ConnectionType.Mobile) {
-                      showDialogDemo(
+                      showGlobalDialog(
                           'Show Dialog From Connectivity, Connection Type : Mobile');
                     } else if (state is InternetDisconnected) {
-                      showDialogDemo(
+                      showGlobalDialog(
                           'Show Dialog From Connectivity, Disconnected');
                     }
                   }),
                   BlocListener<CounterCubit, CounterState>(
                     listener: (context, state) {
-                      showDialogDemo(state.msg);
+                      showGlobalDialog(state.msg);
                     },
                   ),
                 ],
