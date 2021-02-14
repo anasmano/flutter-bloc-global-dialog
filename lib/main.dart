@@ -2,8 +2,7 @@ import 'package:connectivity/connectivity.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_bloc_global_dialog/cubit/cubit.dart';
-import 'cubit/cubit.dart';
-import 'screens/second_screen.dart';
+import 'package:flutter_bloc_global_dialog/screens/second_screen.dart';
 
 void main() {
   runApp(MyApp());
