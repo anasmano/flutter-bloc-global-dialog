@@ -35,8 +35,8 @@ class _CemScreenState extends State<CemScreen> {
                 style: TextStyle(color: Colors.white, fontSize: 25),
               ),
               onPressed: () {
-                BlocProvider.of<CounterCubit>(context)
-                    .showDialog('Show Dialog From Third Screen');
+                BlocProvider.of<CounterCubit>(context).showDialog(
+                    'Show Dialog From Third Screen test git lagi vvv');
               },
             ),
           ],
